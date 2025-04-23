@@ -1,0 +1,10 @@
+let i = 1;
+do {
+    if (i % 2 === 0) {
+        console.log(i + " é par");
+      } else {
+        console.log(i + " é ímpar");
+      }
+      i++;
+    } while (i <= 100);
+    
