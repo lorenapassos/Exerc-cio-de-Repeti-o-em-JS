@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Calculadora Simples</title>
+    <script>
+      function getNumeros() {
+        const num1 = parseFloat(document.getElementById("numero1").value) || 0;
+        const num2 = parseFloat(document.getElementById("numero2").value) || 0;
+        return [num1, num2];
+      }
+
+      function somar() {
+        const [num1, num2] = getNumeros();
+        const resultado = num1 + num2;
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+      }
+
+      function subtrair() {
+        const [num1, num2] = getNumeros();
+        const resultado = num1 - num2;
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+
+      }
+      function dividir() {
+        const [num1, num2] = getNumeros();
+        const resultado = num1 / num2;
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+      }
+      function multiplicar() {
+        const [num1, num2] = getNumeros();
+        const resultado = num1 * num2;
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculadora Simples</h1>
+    <p>Digite dois números:</p>
+
+    <input type="number" id="numero1" placeholder="Número 1" />
+    <input type="number" id="numero2" placeholder="Número 2" />
+    <br /><br />
+
+<button onclick="somar()">+</button>
+<button onclick="subtrair()">-</button>
+<button onclick="dividir()">/</button>
+<button onclick="multiplicar()">*</button>
+
+<p id="resultado"><strong>Resultado:</strong></p>
+  </body>
+</html>
